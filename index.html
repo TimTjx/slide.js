@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滑动渐隐渐现轮播图插件</title>
+    <style>
+        *{margin:0;padding: 0;}
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="slide.js"></script>
+    <script>
+        window.onload = function(){
+           $(function(){
+               $(".nav").slide({
+                    autoPlay:true,
+                    dot:true,
+                    fade:"slide",
+                    dotColor:"red",
+                    autoPlaySpeed:3000
+               })
+           })
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+        <img src="img/5.jpg" alt="">
+        <img src="img/6.jpg" alt="">
+    </div>
+</body>
+</html>
