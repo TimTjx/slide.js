@@ -4,11 +4,7 @@ $.fn.extend({
         if(lb.btn === undefined){
             lb.btn = true;
         }
-        if(lb.fade === undefined){
-            lb.fade = false;
-        }else{
-            lb.fade = true;
-        }
+        lb.effect = lb.effect || "fade"
         lb.autoPlay = lb.autoPlay || false;
         lb.autoPlaySpeed = lb.autoPlaySpeed || 3000;
         lb.dot = lb.dot || false;
@@ -26,7 +22,7 @@ $.fn.extend({
             position:"relative"
         })
         // 滑动
-        if(lb.fade){
+        if(lb.effect == "slide"){
             imgList.show();
             var nva_img = $("<div></div>");
             nva_img.appendTo(this);
@@ -101,7 +97,7 @@ $.fn.extend({
             }
         }
         //渐隐渐现
-        else{
+        if(lb.effect == "fade"){
             function rNext(){
                 if(n < imgLength -1){
                     $(".ul_dot li").css({
