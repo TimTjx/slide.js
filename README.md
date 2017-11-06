@@ -7,6 +7,6 @@ $("").slide({
    fade:"slide",              //切换效果 slide（滑动）  || fade(渐隐渐现，默认)     
    autoPlaySpeed:3000，       //自动播放时间间隔，Number类型，单位毫秒，默认：3000     
    dot:true，                 //是否添加小原点，true 添加 || false(默认) 不添加     
-   dotColor："#3963ec"       //小圆点颜色 #3963ec（默认）     
+   dotColor："#3963ec"        //小圆点颜色 #3963ec（默认）     
    
 })
